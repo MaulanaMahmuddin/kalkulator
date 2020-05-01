@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/bilangan1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtBil1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bil 2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtBil2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnTambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="tambah"
+                android:text="+"/>
+
+            <Button
+                android:id="@+id/btnKurang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="kurang"
+                android:text="-"/>
+
+            <Button
+                android:id="@+id/btnKali"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="kali"
+                android:text="x"/>
+
+            <Button
+                android:id="@+id/btnBagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="bagi"
+                android:text="/"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtHasil"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/gray"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="-"/>
+    </LinearLayout>
+
+</RelativeLayout>
